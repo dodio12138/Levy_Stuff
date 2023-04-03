@@ -6,7 +6,6 @@
 #mainCav {
     color:black;
     font-size: 15px;
-    font-family: 'EffortsPro';
 }
 
 #head {
@@ -17,6 +16,7 @@
 
 a {
     user-select: none;
+    font-family: 'EffortsPro';
 }
 
 ul
