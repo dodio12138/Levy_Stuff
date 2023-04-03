@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Ark;
+    src: url('/res/fonts/Ark.woff');
+}
+
+#mainCav {
+    color:black;
+    font-size: 15px;
+}
+
+#head {
+    font-family: 'Ark';
+    user-select: none;
+}
+
+a {
+    user-select: none;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+#Intro {
+    text-decoration: none;
+    color: black;
+}
+
+[data-title] {
+    position: relative;
+    cursor: help;
+  }
+  
+[data-title]:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+  }
