@@ -1,16 +1,18 @@
 @font-face {
-    font-family: Ark;
-    src: url('/res/fonts/Ark.woff');
+    font-family: EffortsPro;
+    src: url('/res/fonts/EffortsPro.woff');
 }
 
 #mainCav {
     color:black;
     font-size: 15px;
+    font-family: 'EffortsPro';
 }
 
 #head {
-    font-family: 'Ark';
+    font-family: 'EffortsPro';
     user-select: none;
+    font-size: 30px;
 }
 
 a {
