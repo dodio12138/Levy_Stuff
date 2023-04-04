@@ -1,6 +1,6 @@
 @font-face {
     font-family: W95FA;
-    src: url('../../res/fonts/W95FA.otf');
+    src: url('../../../res/fonts/W95FA.otf');
 }
 
 *
@@ -16,7 +16,7 @@
 	background-color:#008080;
 	background-size:100% 100%,auto;
 	font-family:'W95FA';
-	font-size:10px;
+	font-size:15px;
 	color:white;
 	overflow:hidden;
 	display: grid;
