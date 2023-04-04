@@ -1,3 +1,8 @@
+@font-face {
+    font-family: W95FA;
+    src: url('../../res/fonts/W95FA.otf');
+}
+
 *
 {
 	box-sizing:border-box;
@@ -8,12 +13,15 @@
 #DeskBackground {
     width:100%;
 	height:100%;
-	background-color:slategray;
+	background-color:#008080;
 	background-size:100% 100%,auto;
-	font-family:Verdana;
+	font-family:'W95FA';
 	font-size:10px;
 	color:white;
 	overflow:hidden;
+	display: grid;
+	grid-template-rows: 80px 80px 80px 80px;
+	grid-template-columns: 100px;
 }
 
 body
@@ -22,20 +30,29 @@ body
 	height:100%;
 	display:grid;
 	align-items:center;
-	overflow:auto;
-	text-align:center;
+	overflow:hidden;
+}
+
+html
+{
+	width:100%;
+	height:100%;
+	background-size:100% 100%,auto;
+	font-family:'W95FA';
+	font-size:10px;
+	color:#000;
+	overflow:hidden;
+	line-height:20px;
 }
 
 .app-box
 {
-	display:inline-block;
-	border:1px solid #cccccc;
-	border-width:16px 5px 5px 4px;
+	padding:10px;
+	display:grid;
 	position:relative;
 	text-align:initial;
-	width:100px;
-    align-items:center;
-	overflow:auto;
+	align-items: center;
+	overflow: hidden;
 	text-align:center;
 }
 
@@ -46,5 +63,13 @@ body
 	-khtml-user-select:none;
 	-moz-user-select:none; 
 	-ms-user-select:none;
+	text-decoration: none;
 	user-select:none;
+	color: aliceblue;
+	/*text-shadow: 0px 0px 6px #000000, 0.5px 0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px -0.5px 0 #000;*/
+}
+
+.icon
+{
+	width:35%;
 }
