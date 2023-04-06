@@ -11,13 +11,12 @@ html,body
 
 }
 
-#tu {
-    max-width: 15%; /* 设置图片的最大宽度，避免图片超出容器 */
-    user-select:none;
-}
-
 *{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+}
+
+#tuGif {
+    max-width: 35%; /* 设置图片的最大宽度，避免图片超出容器 */
 }
