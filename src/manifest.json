@@ -1,0 +1,15 @@
+{
+    "name": "Dodio",
+    "short_name": "Dodio",
+    "icons": [
+      {
+        "src": "../favicon.ico",
+        "sizes": "16X16",
+        "type": "ico"
+      }
+    ],
+    "theme_color": "#007bff",
+    "background_color": "#f8f8f8",
+    "start_url": "/",
+    "display": "standalone"
+  }
