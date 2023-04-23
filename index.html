@@ -50,11 +50,18 @@
     <nav id="BottomBar" class="windows"></nav>
     <script src="src/js/main.js"></script>
     <script>
-        if (navigator.serviceWorker != null) {
-          navigator.serviceWorker.register("src/js/sw.js")
-          .then(function(registration) {
-            console.log('Registered events at scope: ', registration.scope);
-          });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register("src/js/sw.js", {scope: '/'})
+                .then(function (registration) {
+                // 注册成功
+                    console.log('ServiceWorker registration successful');
+                })
+                    .catch(function (err) {
+                // 注册失败:(
+                console.log('ServiceWorker registration failed');
+                });
+            });
         }
       </script>
 </body>
