@@ -3,7 +3,7 @@ var CACHE_VERSION = 'sw_v1';
 //需缓存的文件
 var CACHE_FILES = [
   '/',
-  '/aaa.html',
+  '/index.html',
   '/bbb.jpg'
 ];
 
