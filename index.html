@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src//css/index.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="manifest" href="src/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <title>Levy</title>
 </head>
 <body>
@@ -52,7 +52,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('src/js/sw.js', {scope: '/'})
+                navigator.serviceWorker.register('/sw.js', {scope: '/'})
                 .then(function (registration) {
                 // 注册成功
                     console.log('ServiceWorker registration successful');
