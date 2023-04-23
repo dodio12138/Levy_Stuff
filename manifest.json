@@ -3,9 +3,9 @@
     "short_name": "Dodio",
     "icons": [
       {
-        "src": "../favicon.ico",
-        "sizes": "16X16",
-        "type": "ico"
+        "src": "res/img/app_icon.png",
+        "sizes": "150X150",
+        "type": "png"
       }
     ],
     "theme_color": "#007bff",
