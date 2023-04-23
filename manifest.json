@@ -1,15 +1,19 @@
 {
-    "name": "Dodio",
-    "short_name": "Dodio",
-    "icons": [
-      {
-        "src": "res/img/app_icon.png",
-        "sizes": "150X150",
-        "type": "png"
-      }
-    ],
-    "theme_color": "#007bff",
-    "background_color": "#f8f8f8",
-    "start_url": "index.html",
-    "display": "standalone"
-  }
+  "name": "DODIO",
+  "short_name": "DODIO",
+  "description": "DODIO&LEVY.",
+  "icons": [{
+    "src": "res/img/app_icon_128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "res/img/app_icon_512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
