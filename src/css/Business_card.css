@@ -64,4 +64,6 @@ body{
 
 #website {
     font-weight: bold;
+    color: inherit;
+    text-decoration: none;
 }
