@@ -21,7 +21,7 @@ body{
 }
 
 
-hr {
+#line {
     border: none;
     border-top: 0.8vw solid rgb(28, 28, 28);
     transform: translateX(-3vw);
