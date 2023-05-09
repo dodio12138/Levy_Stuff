@@ -24,8 +24,38 @@ body{
                 -13px -13px 28px #ffffff;
 }
 
-#name {
-    padding: 5%;
-    font-size: 30px;
+#companyName {
+    padding: 3vw;
+    font-size: 4vw;
     color: rgb(28, 28, 28);
+    user-select: none;
+    font-weight: bolder;
+}
+
+#info {
+    font-size: 1vw;
+    padding-top: 13vw;
+    padding-left: 3vw;
+    color: rgb(28, 28, 28);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+#name {
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+#career {
+    padding-top: 0.8vw;
+}
+
+#number {
+    padding-top: 0.8vw;
+}
+
+#website {
+    font-weight: bold;
 }
