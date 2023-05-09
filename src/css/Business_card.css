@@ -1,6 +1,6 @@
 @font-face {
     font-family: FRANKGO;
-    src: url('../../../../res/fonts/FRANKGO.ttf');
+    src: url('../../res/fonts/FRANKGO.ttf');
 }
 
 html{
@@ -38,7 +38,7 @@ body{
 }
 
 #info {
-    font-size: 1vw;
+    font-size: 1.1vw;
     padding-top: 13vw;
     padding-left: 3vw;
     color: rgb(28, 28, 28);
