@@ -1,16 +1,31 @@
-html,body{
+html{
     width:100%;
 	height:100%;
+    
+}
+
+body{
+    width:100%;
+    height:100%;
     padding: 0px;
     margin: 0px;
     background-color: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #card {
-    width: 80%;
-    height: 30%;
+    width: 60vw;
+    height: 37.08vw;
     border-radius: 0px;
     background: #e0e0e0;
     box-shadow:  13px 13px 28px #bcbcbc,
                 -13px -13px 28px #ffffff;
+}
+
+#name {
+    padding: 5%;
+    font-size: 30px;
+    color: rgb(28, 28, 28);
 }
