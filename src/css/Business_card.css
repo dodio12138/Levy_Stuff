@@ -24,10 +24,11 @@ body{
     font-family:'FRANKGO';
     width: 60vw;
     height: 37.08vw;
-    border-radius: 0px;
+    border-radius: 0.5vw;
     background: #e0e0e0;
     box-shadow:  13px 13px 28px #bcbcbc,
                 -13px -13px 28px #ffffff;
+    backface-visibility:hidden;
 }
 
 #companyName {
@@ -40,7 +41,7 @@ body{
 
 #info {
     font-size: 1.1vw;
-    padding-top: 13vw;
+    padding-top: 8vw;
     padding-left: 3vw;
     color: rgb(28, 28, 28);
     user-select: none;
@@ -62,8 +63,18 @@ body{
     padding-top: 0.8vw;
 }
 
+#e-mail {
+    color: inherit;
+    text-decoration: none;
+}
+
 #website {
     font-weight: bold;
     color: inherit;
     text-decoration: none;
+}
+hr {
+    border: none;
+    border-top: 0.8vw solid rgb(28, 28, 28);
+    transform: translateX(-3vw);
 }
