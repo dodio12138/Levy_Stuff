@@ -20,6 +20,13 @@ body{
     align-items: center;
 }
 
+
+hr {
+    border: none;
+    border-top: 0.8vw solid rgb(28, 28, 28);
+    transform: translateX(-3vw);
+}
+
 #card {
     font-family:'FRANKGO';
     width: 60vw;
@@ -72,10 +79,4 @@ body{
     font-weight: bold;
     color: inherit;
     text-decoration: none;
-}
-
-hr {
-    border: none;
-    border-top: 0.8vw solid rgb(28, 28, 28);
-    transform: translateX(-3vw);
 }
