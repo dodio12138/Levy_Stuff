@@ -72,15 +72,21 @@ body{
     padding-top: 0.8vw;
     color: inherit;
     text-decoration: none;
+    display: inline-block;
+    width: max-content;
 }
 
 #e-mail {
     color: inherit;
     text-decoration: none;
+    display: inline-block;
+    width: max-content;
 }
 
 #website {
     font-weight: bold;
     color: inherit;
     text-decoration: none;
+    display: inline-block;
+    width: max-content;
 }
