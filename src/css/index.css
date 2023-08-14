@@ -21,7 +21,7 @@
 	color:white;
 	overflow:hidden;
 	display: grid;
-	grid-template-rows: 80px 80px 80px 80px 80px 80px;
+	grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
 	grid-template-columns: 100px;
 }
 
