@@ -24,53 +24,57 @@
             <a class="app" href="#">
                 <img class="icon" src="res/img/computer_explorer_cool-0.png">
                 <br>
-                Levy's PC
+                <div class="app-title">Levy's PC</div>
             </a>
         </div>
         <div class="app-box">
             <a class="app" href="#">
                 <img class="icon" src="res/img/recycle_bin_empty_cool-0.png">
                 <br>
-                Recycle Bin
+                <div class="app-title">Recycle Bin</div>
             </a>
         </div>
         <div class="app-box">
             <a class="app" href="#">
                 <img class="icon" src="res/img/directory_closed_cool-0.png">
                 <br>
-                Documents
-            </a>
-        </div>
-        <div class="app-box">
-            <a id = "Stuff" class="app" href="src/page/levy_stuff.html">
-                <img class="icon" src="res/img/Icon.png">
-                <br>
-                Levy's Stuff
+                <div class="app-title">Documents</div>
             </a>
         </div>
         <div class="app-box">
             <a id ="BunnyGame" class="app" href="src/page/BunnyGame.html">
                 <img class="icon" src="res/img/tuStatic.png">
                 <br>
-                BunnyGame
+                <div class="app-title">BunnyGame</div>
             </a>
         </div>
         <div class="app-box">
-            <a id ="FunPages" class="app" href="https://dodio12138.github.io/fun-pages/">
+            <a id ="FunPages" class="app" href="https://dodio12138.github.io/fun-pages/" title="Some interesting HTML stuffs.">
                 <img class="icon" src="res/img/web_file_set-4.png">
                 <br>
-                FunPages
+                <div class="app-title">FunPages</div>
             </a>
         </div>
         <div class="app-box">
-            <a id ="MeTerminal" class="app" href="https://dodio12138.github.io/MeTerminal/src/MePC.html">
+            <a id ="MeTerminal" class="app" href="https://dodio12138.github.io/MeTerminal/src/MePC.html" title="I locked myself in the terminal !">
                 <img class="icon" src="res/img/console_prompt-0.png">
                 <br>
-                MeTerminal
+                <div class="app-title">MeTerminal</div>
             </a>
         </div>
     </div>
-    <nav id="BottomBar" class="windows"></nav>
+    <nav id="BottomBar" class="windows">
+        <button class="start-button" title="Click here to begin.">
+            <img src="./res/img/windows-0.png">
+            <b>Start</b>
+        </button>
+        <div class="BottomBar-divider"></div>
+        <div class="tasks-bar"></div>
+        <div class="BottomBar-divider"></div>
+        <div class="tray inset-shallow">
+            <div id="taskbar-time">00:00:00</div>
+        </div>
+    </nav>
     <script src="src/js/main.js"></script>
     <script>
         if ('serviceWorker' in navigator) {

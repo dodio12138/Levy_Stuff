@@ -1,14 +1,22 @@
+:root {
+	--ButtonLight: rgb(223, 223, 223);
+    --ButtonShadow: rgb(128, 128, 128);
+    --ButtonText: rgb(0, 0, 0);
+	--ButtonFace: rgb(192, 192, 192);
+    --ButtonHilight: rgb(255, 255, 255);
+}
+
 @font-face {
     font-family: W95FA;
     src: url('../../../../res/fonts/W95FA.otf');
 }
 
-*
-{
-	box-sizing:border-box;
+* {
+	/*box-sizing:border-box;*/
 	padding:0px;
 	margin:0px;
 	cursor: url('../../../../res/img/arrow.cur'), default;
+	image-rendering: pixelated;
 }
 
 #DeskBackground {
@@ -46,6 +54,11 @@ html
 	line-height:20px;
 }
 
+b {
+    font-weight: bold;
+	font-family: W95FA;
+}
+
 .app-box
 {
 	padding:10px;
@@ -75,18 +88,90 @@ html
 	width:35%;
 }
 
+.inset-shallow {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(128, 128, 128) rgb(255, 255, 255) rgb(255, 255, 255) rgb(128, 128, 128);
+    border-color: var(--ButtonShadow) var(--ButtonHilight) var(--ButtonHilight) var(--ButtonShadow);
+    background-color: rgb(192, 192, 192);
+    background-color: var(--ButtonFace);
+    color: rgb(0, 0, 0);
+    color: var(--ButtonText);
+}
+
 #BottomBar {
 	width: 100%;
-    height: 35px;
-    background-color: #C7C7C7;
+    height: 28px;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;	
+    display: flex;
+	outline: 1px solid var(--ButtonLight);
+    border-top: 1px solid var(--ButtonHilight);
+    background: var(--ButtonFace);
+}
+
+.start-button {
+	flex-shrink: 0;
+    padding: 2px 4px;
+	border-width: 2px 2px;
+	border-color: var(--ButtonLight) var(--ButtonShadow) var(--ButtonShadow) var(--ButtonLight);
+	margin: 2px;
+	background-color: var(--ButtonFace);
+
+	line-height: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.start-button img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	margin-right: 3px;
+}
+
+.BottomBar-divider {
+	border-left: 1px solid var(--ButtonShadow);
+    border-right: 1px solid var(--ButtonHilight);
+	margin: 2px 0px 2px 0px;
+}
+
+.tasks-bar {
+	display: flex;
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+}
+
+.tray {
+	display: flex;
+    flex-direction: row;
+    line-height: 22px;
+    box-sizing: border-box;
+    vertical-align: middle;
+	margin: 2px;
+}
+
+#taskbar-time {
+	width: 60px;
+    text-align: center;
 }
 
 .windows {
 	border-style:outset;
-    border-width:2.5px;
+    border-width:1.5px;
+}
+
+.app-title {
+	transition-delay: outline 0.2s;
+}
+
+.app-title:hover {
+	outline: 1px dotted #f18484;
+    outline-offset: -1px;
+	transition-delay: 0.2s;
 }
