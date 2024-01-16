@@ -1,0 +1,44 @@
+window {
+    width: 250px;
+    height: 90px;
+    position: absolute;
+    top: calc(50vh - 45px);
+    left: calc(50vw - 125px);
+    z-index: 15;
+    contain: layout;
+    display: flex;
+    flex-direction: column;
+
+    border-style: solid;
+    border-width: 2px 2px;
+    padding: 2px;
+    background: var(--ButtonFace);
+    border-color: var(--ButtonLight) var(--ButtonShadow) var(--ButtonShadow) var(--ButtonLight);
+}
+
+windowTitlebar {
+    height: 18px;
+    font-weight: bold;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    background: linear-gradient(to right, var(--ActiveTitle) 0%, var(--GradientActiveTitle) 100%);
+}
+
+.windows-title {
+    display: inline-block !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 2px;
+    color: white;
+    font-weight: bold;
+}

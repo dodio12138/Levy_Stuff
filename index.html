@@ -8,16 +8,21 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="HKBa6nygRazpup6hj2qCoD_GkK5QwVoO-rIbLxgJYp0" />
     <link rel="stylesheet" href="src//css/index.css">
+    <link rel="stylesheet" href="src//css/windows.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="manifest" href="manifest.json">
+    <link rel="import" href="src//html/docwindow.html">
+    <script type="module" src="src/js/docwindow.js"></script>
     <title>Levy</title>
 </head>
+
 <body>
     <div id="DeskBackground">
         <div class="app-box">
@@ -34,7 +39,7 @@
                 <div class="app-title">Recycle Bin</div>
             </a>
         </div>
-        <div class="app-box">
+        <div class="app-box" ondblclick="docwindow()">
             <a class="app" href="#">
                 <img class="icon" src="res/img/directory_closed_cool-0.png">
                 <br>
@@ -42,27 +47,30 @@
             </a>
         </div>
         <div class="app-box">
-            <a id ="BunnyGame" class="app" href="src/page/BunnyGame.html">
+            <a id="BunnyGame" class="app" href="src/page/BunnyGame.html">
                 <img class="icon" src="res/img/tuStatic.png">
                 <br>
                 <div class="app-title">BunnyGame</div>
             </a>
         </div>
         <div class="app-box">
-            <a id ="FunPages" class="app" href="https://dodio12138.github.io/fun-pages/" title="Some interesting HTML stuffs.">
+            <a id="FunPages" class="app" href="https://dodio12138.github.io/fun-pages/"
+                title="Some interesting HTML stuffs.">
                 <img class="icon" src="res/img/web_file_set-4.png">
                 <br>
                 <div class="app-title">FunPages</div>
             </a>
         </div>
         <div class="app-box">
-            <a id ="MeTerminal" class="app" href="https://dodio12138.github.io/MeTerminal/src/MePC.html" title="I locked myself in the terminal !">
+            <a id="MeTerminal" class="app" href="https://dodio12138.github.io/MeTerminal/src/MePC.html"
+                title="I locked myself in the terminal !">
                 <img class="icon" src="res/img/console_prompt-0.png">
                 <br>
                 <div class="app-title">MeTerminal</div>
             </a>
         </div>
     </div>
+    <div id="windows"></div>
     <nav id="BottomBar" class="windows">
         <button class="start-button" title="Click here to begin.">
             <img src="./res/img/windows-0.png">
@@ -76,20 +84,22 @@
         </div>
     </nav>
     <script src="src/js/main.js"></script>
+    <script src="src/js/docwindow.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/sw.js', {scope: '/'})
-                .then(function (registration) {
-                // 注册成功
-                    console.log('ServiceWorker registration successful');
-                })
+                navigator.serviceWorker.register('/sw.js', { scope: '/' })
+                    .then(function (registration) {
+                        // 注册成功
+                        console.log('ServiceWorker registration successful');
+                    })
                     .catch(function (err) {
-                // 注册失败:(
-                console.log('ServiceWorker registration failed');
-                });
+                        // 注册失败:(
+                        console.log('ServiceWorker registration failed');
+                    });
             });
         }
-      </script>
+    </script>
 </body>
+
 </html>

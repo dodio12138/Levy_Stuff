@@ -4,6 +4,8 @@
     --ButtonText: rgb(0, 0, 0);
 	--ButtonFace: rgb(192, 192, 192);
     --ButtonHilight: rgb(255, 255, 255);
+	--ActiveTitle: rgb(0, 0, 128);
+	--GradientActiveTitle: rgb(16, 132, 208);
 }
 
 @font-face {
