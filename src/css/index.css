@@ -17,9 +17,13 @@
 	/*box-sizing:border-box;*/
 	padding:0px;
 	margin:0px;
-	cursor: url('../../../../res/img/arrow.cur'), default;
 	image-rendering: pixelated;
 }
+
+.dragging {
+	cursor: url('../../../../res/img/handgrab2.cur'), default;
+}
+
 
 #DeskBackground {
     width:100%;
@@ -42,6 +46,7 @@ body
 	display:grid;
 	align-items:center;
 	overflow:hidden;
+	cursor: url('../../../../res/img/arrow.cur'), default;
 }
 
 html
@@ -59,8 +64,12 @@ html
 b {
     font-weight: bold;
 	font-family: W95FA;
+	text-decoration: none;
 }
 
+a {
+	cursor: url('../../../../res/img/Cursor_15.cur'), default;
+}
 .app-box
 {
 	padding:10px;
@@ -112,6 +121,7 @@ b {
 	outline: 1px solid var(--ButtonLight);
     border-top: 1px solid var(--ButtonHilight);
     background: var(--ButtonFace);
+	text-decoration: none;
 }
 
 .start-button {
@@ -127,6 +137,7 @@ b {
     display: flex;
     flex-direction: row;
     align-items: center;
+	text-decoration: none;
 }
 
 .start-button img {

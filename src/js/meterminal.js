@@ -22,8 +22,8 @@ function meterminalwin() {
     contect.appendChild(terminal);
 
     //去除视频遮罩
-    const terminalWindows = terminal.contentWindow;
-    const terminalDocument = terminalWindows.contentDocument;
+    // const terminalWindows = terminal.contentWindow;
+    // const terminalDocument = terminalWindows.contentDocument;
 
-    terminalDocument.getElementById('monitor-videos').style.display = 'none';
+    // terminalDocument.getElementById('monitor-videos').style.display = 'none';
 }

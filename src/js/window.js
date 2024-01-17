@@ -5,9 +5,21 @@ function closewindow(button) {
 
 function minwindow(button) {
     var window = button.parentNode.parentNode;
-    console(window);
-    window.getElementByClassName('wincontent')[0].style.display = 'none';
-    window.style.height = '20px';
+    if(window.getElementsByClassName('wincontent')[0].style.display != 'none'){
+        window.getElementsByClassName('wincontent')[0].style.display = 'none';
+    }else{
+        window.getElementsByClassName('wincontent')[0].style.display = 'flex';
+    }
+}
+
+
+//TODO
+function maxwindow(button){
+    // var window = button.parentNode.parentNode;
+    // if(isMax){
+    //     window.style.width = '400px';
+    //     window.style.height = ''
+    // }
 }
 
 function createWindow(id,width, height,title,icon) {
@@ -37,6 +49,7 @@ function createWindow(id,width, height,title,icon) {
     //链接功能
     winclose.setAttribute('onclick', 'closewindow(this)');
     winmin.setAttribute('onclick', 'minwindow(this)');
+    winmax.setAttribute('onclick','maxwindow(this)');
 
     windowDiv.appendChild(windowTitlebar);
     windowTitlebar.appendChild(TitlebarImg);
@@ -50,8 +63,9 @@ function createWindow(id,width, height,title,icon) {
     windowDiv.appendChild(wincontent);
 
     //初始化窗口位置
-    windowDiv.style.width = width + 'px';
-    windowDiv.style.height = height + 'px';
+    wincontent.style.width = width + 'px';
+    windowTitlebar.style.width = (width + 2* (5)) +  'px';
+    wincontent.style.height = height + 'px';
     windowDiv.style.top = `calc(40% - ${height/2}px)`;
     windowDiv.style.left = `calc(50% - ${width/2}px)`;
 
@@ -68,6 +82,62 @@ function createWindow(id,width, height,title,icon) {
     closeicon.style.backgroundImage = `url("../../res/icon/close.svg")`;
 
     Title.innerHTML = title;
+
+    makeDraggable(windowTitlebar,windowDiv);
     
     return windowDiv;
+}
+
+//TODO
+function filelistPanel() {
+
+}
+
+function leftInfoPanel(window) {
+    const panel = document.createElement('div');
+    panel.className = 'leftInfoPanel';
+    
+    const h3 = document.createElement('h3');
+    h3.innerHTML = 'INFO';
+    const p = document.createElement('p');
+    p.innerHTML = "These are some interesting projects I've been working on in my spare time.";
+
+    const line = document.createElement('div');
+    line.className = 'dividingLine';
+
+
+
+    const contect = window.getElementsByClassName('wincontent')[0];
+    panel.appendChild(h3);
+    panel.appendChild(p);
+    contect.appendChild(panel);
+    contect.appendChild(line);
+
+}
+
+function makeDraggable(element,moveE) {
+    var isDown = false;
+    var offsetX, offsetY;
+
+    element.addEventListener('mousedown', function(e) {
+        isDown = true;
+        offsetX = moveE.offsetLeft - e.clientX;
+        offsetY = moveE.offsetTop - e.clientY;
+        // 添加一个类或样式以指示拖动状态
+        element.classList.add('dragging');
+    }, true);
+
+    document.addEventListener('mouseup', function() {
+        isDown = false;
+        // 移除拖动状态的类或样式
+        element.classList.remove('dragging');
+    }, true);
+
+    document.addEventListener('mousemove', function(e) {
+        e.preventDefault(); // 防止默认事件，如选中文本等
+        if (isDown) {
+            moveE.style.left = e.clientX + offsetX + 'px';
+            moveE.style.top = e.clientY + offsetY + 'px';
+        }
+    }, true);
 }

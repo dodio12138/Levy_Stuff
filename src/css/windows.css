@@ -1,9 +1,5 @@
 window {
-    width: 250px;
-    height: 90px;
     position: absolute;
-    top: calc(50vh - 45px);
-    left: calc(50vw - 125px);
     z-index: 0;
     contain: layout;
     display: flex;
@@ -14,6 +10,7 @@ window {
     padding: 2px;
     background: var(--ButtonFace);
     border-color: var(--ButtonLight) black black var(--ButtonLight);
+    text-decoration: none;
 }
 
 windowTitlebar {
@@ -27,6 +24,7 @@ windowTitlebar {
     white-space: nowrap;
     overflow: hidden;
     flex-shrink: 0;
+    z-index: 5;
 
     background: linear-gradient(to right, var(--ActiveTitle) 0%, var(--GradientActiveTitle) 100%);
 }
@@ -75,15 +73,16 @@ windowTitlebar {
 .wincontent {
     outline: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
 
-    flex: 1;
     min-height: 0px;
     contain: layout paint;
     margin-top: 2px;
     margin-left: -1px;
     margin-right: 0px;
-    padding: 0;
+    padding: 5px;
+    justify-content: flex-start;
 
     background-color: aliceblue;
 
@@ -99,4 +98,26 @@ windowTitlebar {
     /* 内描边，底部橙色 */
 
     border-color: var(--ButtonLight) var(--ButtonShadow) var(--ButtonShadow) var(--ButtonLight);
+}
+
+.leftInfoPanel{
+    width: 40%;
+    height: 90%;
+    margin: 2% 1% 2% 1%;
+
+    /*border-right: 1px;
+    border-color: var(--ButtonLight);
+    box-shadow: inset -1px 0 0 black;*/
+}
+
+.leftInfoPanel h3 {
+    text-align: center;
+}
+
+.dividingLine {
+    width: 0px;
+    height: 95%;
+
+    border-left: 1px solid var(--ButtonShadow);
+    border-right: 1px solid var(--ButtonHilight);
 }
