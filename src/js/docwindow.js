@@ -1,15 +1,15 @@
 function docwindow() {
-    document.getElementById('windows').appendChild(createWindow(500, 400,'Document'))
+    document.getElementById('windows').appendChild(createWindow('docwin',500, 400,'Document','../../res/img/directory_closed_cool-0.png'))
 }
-
 
 function closewindow(button) {
     var window = button.parentNode.parentNode;
     window.remove();
 }
 
-function createWindow(width, height,title) {
+function createWindow(id,width, height,title,icon) {
     const windowDiv = document.createElement('window');
+    windowDiv.id = id;
     const windowTitlebar = document.createElement('windowTitlebar');
     const TitlebarImg = document.createElement('img');
     const Title = document.createElement('div');
@@ -28,6 +28,9 @@ function createWindow(width, height,title) {
     const closeicon = document.createElement('span');
     closeicon.className = 'winbaricon';
 
+    const wincontent = document.createElement('div');
+    wincontent.className = 'wincontent';
+
     winclose.setAttribute('onclick', 'closewindow(this)');
 
 
@@ -40,13 +43,14 @@ function createWindow(width, height,title) {
     windowTitlebar.appendChild(winmin);
     windowTitlebar.appendChild(winmax);
     windowTitlebar.appendChild(winclose);
+    windowDiv.appendChild(wincontent);
 
     windowDiv.style.width = width + 'px';
     windowDiv.style.height = height + 'px';
     windowDiv.style.top = `calc(40% - ${height/2}px)`;
-    windowDiv.style.left = `calc(40% - ${width/2}px)`;
+    windowDiv.style.left = `calc(50% - ${width/2}px)`;
 
-    TitlebarImg.src = "../../res/img/directory_closed_cool-0.png";
+    TitlebarImg.src = icon;
     TitlebarImg.style.width = '16px';
     TitlebarImg.style.height = '16px';
     TitlebarImg.style.marginLeft = '2px';

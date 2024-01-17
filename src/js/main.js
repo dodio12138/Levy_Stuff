@@ -50,16 +50,16 @@ FunPages.onclick = function (event) {
     }
 };
 
-MeTerminal.addEventListener('dblclick', function (event) {
-    //event.preventDefault();
-    window.open(MeTerminal.href, '_blank'); // 在新窗口中打开链接
-});
-MeTerminal.onclick = function (event) {
-    if (isMobile) {
-        //window.open(MeTerminal.href, '_blank')
-    }
-    else {
-        event.preventDefault(); // 阻止默认行为
-        return false; // 取消事件传播
-    }
-};
+// MeTerminal.addEventListener('dblclick', function (event) {
+//     //event.preventDefault();
+//     window.open(MeTerminal.href, '_blank'); // 在新窗口中打开链接
+// });
+// MeTerminal.onclick = function (event) {
+//     if (isMobile) {
+//         //window.open(MeTerminal.href, '_blank')
+//     }
+//     else {
+//         event.preventDefault(); // 阻止默认行为
+//         return false; // 取消事件传播
+//     }
+// };

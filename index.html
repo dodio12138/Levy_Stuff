@@ -40,7 +40,7 @@
             </a>
         </div>
         <div class="app-box" ondblclick="docwindow()">
-            <a class="app" href="#">
+            <a class="app">
                 <img class="icon" src="res/img/directory_closed_cool-0.png">
                 <br>
                 <div class="app-title">Documents</div>
@@ -61,8 +61,8 @@
                 <div class="app-title">FunPages</div>
             </a>
         </div>
-        <div class="app-box">
-            <a id="MeTerminal" class="app" href="https://dodio12138.github.io/MeTerminal/src/MePC.html"
+        <div class="app-box" ondblclick="meterminalwin()">
+            <a id="MeTerminal" class="app"
                 title="I locked myself in the terminal !">
                 <img class="icon" src="res/img/console_prompt-0.png">
                 <br>
@@ -85,6 +85,7 @@
     </nav>
     <script src="src/js/main.js"></script>
     <script src="src/js/docwindow.js"></script>
+    <script src="src/js/meterminal.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {

@@ -169,11 +169,11 @@ b {
 }
 
 .app-title {
-	transition-delay: outline 0.2s;
+	transition-delay: outline 0.1s;
 }
 
 .app-title:hover {
 	outline: 1px dotted #f18484;
     outline-offset: -1px;
-	transition-delay: 0.2s;
+	transition-delay: outline 0.1s;
 }
