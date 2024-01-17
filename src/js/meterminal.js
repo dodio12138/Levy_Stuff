@@ -4,7 +4,7 @@ function meterminalwin() {
     const contect = meterminalwin.getElementsByClassName('wincontent')[0];
 
     const terminal = document.createElement('iframe');
-    terminal.src = 'https://dodio12138.github.io/MeTerminal/src/index.html';
+    terminal.src = 'https://dodio12138.itch.io/me-terminal';
 
     contect.style.position = 'relative';
     contect.style.overflow = 'hidden';
