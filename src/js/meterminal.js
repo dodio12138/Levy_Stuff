@@ -21,4 +21,8 @@ function meterminalwin() {
     terminal.style.transform = 'scale(0.5)';
     contect.appendChild(terminal);
 
+    const terminalWindows = terminal.contentWindow;
+    const terminalDocument = terminalWindows.contentDocument;
+
+    terminalDocument.getElementById('monitor-videos').style.display = 'none';
 }

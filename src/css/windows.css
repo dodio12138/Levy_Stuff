@@ -10,10 +10,10 @@ window {
     flex-direction: column;
 
     border-style: solid;
-    border-width: 2px 2px;
+    border-width: 1px 1px;
     padding: 2px;
     background: var(--ButtonFace);
-    border-color: var(--ButtonLight) var(--ButtonShadow) var(--ButtonShadow) var(--ButtonLight);
+    border-color: var(--ButtonLight) black black var(--ButtonLight);
 }
 
 windowTitlebar {
@@ -63,13 +63,13 @@ windowTitlebar {
 
 .winbaricon {
     display: block;
-    --sprite-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAYAAADo3z3CAAAAoUlEQVRIS9VVWw7AIAib9z/0FpZgCOFRgpluf9MClhYdV++7gfDhYLxYDw+UyiHd5F8S5lr6zNa6Xpv/KwhHOahQpLB1+CwfycgYrwmE0WK8MTsIR1aOGsR+NYkkYzN5/pGwVA9xA/diq8LeHCKuQxQ+aoYt2yJWtpSNZth0edRpGVC5eGQcSg4hXLml3fdpBeHs8evWyPKX9ruXVqnYCeAHA8IyC9K2kmkAAAAASUVORK5CYII=);
-    --sprite-y: 0;
     image-rendering: pixelated;
     width: 12px;
     height: 10px;
     position: relative;
     pointer-events: none;
+    background-repeat: no-repeat;
+    background-position:center;
 }
 
 .wincontent {
@@ -82,7 +82,7 @@ windowTitlebar {
     contain: layout paint;
     margin-top: 2px;
     margin-left: -1px;
-    margin-right: -1px;
+    margin-right: 0px;
     padding: 0;
 
     background-color: aliceblue;
