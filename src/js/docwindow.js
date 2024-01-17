@@ -8,11 +8,31 @@ function createWindow(width, height,title) {
     const TitlebarImg = document.createElement('img');
     const Title = document.createElement('div');
     Title.className = 'windows-title';
+    const winmin = document.createElement('button');
+    winmin.className = 'winbarbutton';
+    const winmax = document.createElement('button');
+    winmax.className = 'winbarbutton';
+    const winclose = document.createElement('button');
+    winclose.className = 'winbarbutton';
+
+    const minicon = document.createElement('span');
+    minicon.className = 'winbaricon';
+    const maxicon = document.createElement('span');
+    maxicon.className = 'winbaricon';
+    const closeicon = document.createElement('span');
+    closeicon.className = 'winbaricon';
+
 
 
     windowDiv.appendChild(windowTitlebar);
     windowTitlebar.appendChild(TitlebarImg);
     windowTitlebar.appendChild(Title);
+    winmin.appendChild(minicon);
+    winmax.appendChild(maxicon);
+    winclose.appendChild(closeicon);
+    windowTitlebar.appendChild(winmin);
+    windowTitlebar.appendChild(winmax);
+    windowTitlebar.appendChild(winclose);
 
     windowDiv.style.width = width + 'px';
     windowDiv.style.height = height + 'px';
@@ -25,7 +45,6 @@ function createWindow(width, height,title) {
     TitlebarImg.style.marginLeft = '2px';
 
     Title.innerHTML = title;
-
     
     return windowDiv;
 }

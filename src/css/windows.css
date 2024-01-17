@@ -41,4 +41,34 @@ windowTitlebar {
     padding-left: 2px;
     color: white;
     font-weight: bold;
+
+    position: relative;
+    flex: 1;
+}
+
+.winbarbutton {
+    display: block;
+    width: 16px;
+    height: 14px;
+    padding: 0;
+    margin: 2px 0;
+
+    border-style: solid;
+    border-width: 2px 2px;
+
+    border-color: var(--ButtonLight) var(--ButtonShadow) var(--ButtonShadow) var(--ButtonLight);
+    background-color: var(--ButtonFace);
+    position: relative;
+    outline: none;
+}
+
+.winbaricon {
+    display: block;
+    --sprite-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAYAAADo3z3CAAAAoUlEQVRIS9VVWw7AIAib9z/0FpZgCOFRgpluf9MClhYdV++7gfDhYLxYDw+UyiHd5F8S5lr6zNa6Xpv/KwhHOahQpLB1+CwfycgYrwmE0WK8MTsIR1aOGsR+NYkkYzN5/pGwVA9xA/diq8LeHCKuQxQ+aoYt2yJWtpSNZth0edRpGVC5eGQcSg4hXLml3fdpBeHs8evWyPKX9ruXVqnYCeAHA8IyC9K2kmkAAAAASUVORK5CYII=);
+    --sprite-y: 0;
+    image-rendering: pixelated;
+    width: 12px;
+    height: 10px;
+    position: relative;
+    pointer-events: none;
 }
