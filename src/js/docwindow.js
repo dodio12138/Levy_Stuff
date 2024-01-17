@@ -2,6 +2,12 @@ function docwindow() {
     document.getElementById('windows').appendChild(createWindow(500, 400,'Document'))
 }
 
+
+function closewindow(button) {
+    var window = button.parentNode.parentNode;
+    window.remove();
+}
+
 function createWindow(width, height,title) {
     const windowDiv = document.createElement('window');
     const windowTitlebar = document.createElement('windowTitlebar');
@@ -22,6 +28,7 @@ function createWindow(width, height,title) {
     const closeicon = document.createElement('span');
     closeicon.className = 'winbaricon';
 
+    winclose.setAttribute('onclick', 'closewindow(this)');
 
 
     windowDiv.appendChild(windowTitlebar);
@@ -36,13 +43,18 @@ function createWindow(width, height,title) {
 
     windowDiv.style.width = width + 'px';
     windowDiv.style.height = height + 'px';
-    windowDiv.style.top = `calc(40vh - ${height/2}px)`;
-    windowDiv.style.left = `calc(40vw - ${width/2}px)`;
+    windowDiv.style.top = `calc(40% - ${height/2}px)`;
+    windowDiv.style.left = `calc(40% - ${width/2}px)`;
 
     TitlebarImg.src = "../../res/img/directory_closed_cool-0.png";
     TitlebarImg.style.width = '16px';
     TitlebarImg.style.height = '16px';
     TitlebarImg.style.marginLeft = '2px';
+
+    winclose.style.margin = '0px 2px';
+    winmin.innerHTML = '_';
+    winmax.innerHTML = '□';
+    winclose.innerHTML = 'X';
 
     Title.innerHTML = title;
     
