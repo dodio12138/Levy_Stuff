@@ -3,6 +3,13 @@ function closewindow(button) {
     window.remove();
 }
 
+function minwindow(button) {
+    var window = button.parentNode.parentNode;
+    console(window);
+    window.getElementByClassName('wincontent')[0].style.display = 'none';
+    window.style.height = '20px';
+}
+
 function createWindow(id,width, height,title,icon) {
     const windowDiv = document.createElement('window');
     windowDiv.id = id;
@@ -27,8 +34,9 @@ function createWindow(id,width, height,title,icon) {
     const wincontent = document.createElement('div');
     wincontent.className = 'wincontent';
 
+    //链接功能
     winclose.setAttribute('onclick', 'closewindow(this)');
-
+    winmin.setAttribute('onclick', 'minwindow(this)');
 
     windowDiv.appendChild(windowTitlebar);
     windowTitlebar.appendChild(TitlebarImg);
@@ -41,6 +49,7 @@ function createWindow(id,width, height,title,icon) {
     windowTitlebar.appendChild(winclose);
     windowDiv.appendChild(wincontent);
 
+    //初始化窗口位置
     windowDiv.style.width = width + 'px';
     windowDiv.style.height = height + 'px';
     windowDiv.style.top = `calc(40% - ${height/2}px)`;
@@ -51,6 +60,7 @@ function createWindow(id,width, height,title,icon) {
     TitlebarImg.style.height = '16px';
     TitlebarImg.style.marginLeft = '2px';
 
+    //右上角图片
     winclose.style.margin = '0px 2px';
     minicon.style.backgroundImage = `url("../../res/icon/minimize.svg")`;
     minicon.style.backgroundPosition = "bottom";

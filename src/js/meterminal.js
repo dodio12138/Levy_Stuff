@@ -21,6 +21,7 @@ function meterminalwin() {
     terminal.style.transform = 'scale(0.5)';
     contect.appendChild(terminal);
 
+    //去除视频遮罩
     const terminalWindows = terminal.contentWindow;
     const terminalDocument = terminalWindows.contentDocument;
 
