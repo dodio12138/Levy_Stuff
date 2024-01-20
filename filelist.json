@@ -1,0 +1,23 @@
+{
+    "docProject": [
+      {
+        "id": 1,
+        "name": "BadgeGenerator",
+        "desc": "Easy and fast badge generation based on shields.io, Support for custom icons.",
+        "link": "https://dodio12138.github.io/badge-generator/src/index.html"
+      },
+      {
+        "id": 2,
+        "name": "AutoTasker",
+        "desc": "A multi-step auto clicker.",
+        "link": "https://github.com/dodio12138/auto-tasker"
+      },
+      {
+        "id": 3,
+        "name": "MeTerminal",
+        "desc": "A web page that simulates terminal",
+        "link": "https://dodio12138.github.io/MeTerminal/src/MePC.html"
+      }
+    ]
+  }
+  
