@@ -20,6 +20,8 @@ var FunPages = document.getElementById('FunPages');
 
 var MeTerminal = document.getElementById('MeTerminal');
 
+var blog = document.getElementById('Blog');
+
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 BunnyGame.addEventListener('dblclick', function (event) {
@@ -41,6 +43,20 @@ FunPages.addEventListener('dblclick', function (event) {
     window.open(FunPages.href, '_blank'); // 在新窗口中打开链接
 });
 FunPages.onclick = function (event) {
+    if (isMobile) {
+        //window.open(BunnyGame.href, '_blank')
+    }
+    else {
+        event.preventDefault(); // 阻止默认行为
+        return false; // 取消事件传播
+    }
+};
+
+blog.addEventListener('dblclick', function (event) {
+    //event.preventDefault();
+    window.open(blog.href, '_blank'); // 在新窗口中打开链接
+});
+blog.onclick = function (event) {
     if (isMobile) {
         //window.open(BunnyGame.href, '_blank')
     }
