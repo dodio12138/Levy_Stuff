@@ -12,7 +12,7 @@ function minwindow(button) {
     }
 }
 
-let isMax = false;
+// let isMax = false;
 
 //TODO
 function maxwindow(button) {
@@ -174,8 +174,9 @@ function makeDraggable(element, moveE) {
 function createFile(window, name) {
     const file = document.createElement('div');
     file.className = 'file';
-    const fileIcon = document.createElement('div');
+    const fileIcon = document.createElement('img');
     fileIcon.className = 'fileIcon';
+    fileIcon.src = '../../res/img/web_file-2.png';
     const fileName = document.createElement('div');
     fileName.className = 'fileName';
     file.id = name;
@@ -210,6 +211,9 @@ function showFileInfo(panel, infopanel) {
                     infopanel.getElementsByClassName('infoDesc')[0].innerHTML = styledDesc + data.docProject.find(project => project.name === folderId).desc;
                 })
                 .catch(error => console.error('Error fetching data:', error));
+        }else{
+            infopanel.getElementsByClassName('infoName')[0].innerHTML = '';
+            infopanel.getElementsByClassName('infoDesc')[0].innerHTML = '';
         }
     });
     panel.addEventListener('dblclick', function (event) {

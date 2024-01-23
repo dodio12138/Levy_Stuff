@@ -57,6 +57,7 @@ windowTitlebar {
     background-color: var(--ButtonFace);
     position: relative;
     outline: none;
+    cursor: url('../../../../res/img/arrow.cur'), default;
 }
 
 .winbaricon {
@@ -123,15 +124,18 @@ windowTitlebar {
 }
 
 .filelistPanel {
-    display: flex;
+    display: grid;
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
     margin: 20px;
     height: 90%;
     margin: 2% 1% 2% 1%;
-    align-content: flex-start;
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
 }
 
 .file {
@@ -153,11 +157,10 @@ windowTitlebar {
     margin-bottom: 5px;
     justify-content: center;
     text-overflow: ellipsis;
-    white-space:initial; 
+    white-space: initial;
 }
 
 .fileIcon {
     width: 80%;
     height: 80%;
-    background-color: black;
 }
